@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { LandingComponent } from './landing/landing.component';
+
 const routes: Routes = [
-  { path: '', redirectTo: 'user/dashboard', pathMatch: 'full' },
+  { path: '', component: LandingComponent },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
